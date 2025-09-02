@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>calculator</h1>
+<table>      
+   <form>
+        <tr>
+            <td><label for="num">1st Number :</label>
+            <input type="number" id="one" ></td>
+        </tr>
+           
+        <tr>
+            <td><label for="num">2nd Number:</label>
+            <input type="number" id="two"></td>
+        </tr>  
+        <tr>
+            <td>
+            <p>Answer</p>
+            <p id="ans"></p>
+            </td>
+        </tr>            
+        <tr>
+            <td>
+            <button id="fr" onclick="add()">Add</button>
+            <button id="fr" onclick="sub()">Sub</button>
+            <button id="fr" onclick="multiply()">Multiply</button>
+            <button id="fr" onclick
+            ="divide()">Divide</button>
+        </td>
+        </tr>
+        
+    </form>
+</table>
+   <script>
+       document.getElementsByTagName('body')[0].addEventListener('click',(e)=>{
+       e.preventDefault();
+    })
+       function add(){
+        let fval=document.getElementById('one').value
+        let sval=document.getElementById('two').value
+        document.getElementById('ans').innerHTML=Number(fval)+Number(sval)
+    }
+     function sub(){
+        let fval=document.getElementById('one').value
+        let sval=document.getElementById('two').value
+        document.getElementById('ans').innerHTML=Number(fval)-Number(sval)
+    }
+     function multiply(){
+        let fval=document.getElementById('one').value
+        let sval=document.getElementById('two').value
+        document.getElementById('ans').innerHTML=Number(fval)*Number(sval)
+    }
+      function divide(){
+        let fval=document.getElementById('one').value
+        let sval=document.getElementById('two').value
+        document.getElementById('ans').innerHTML=Number(fval)/Number(sval)
+    }
+</script>
+
+</body>
+</html>
